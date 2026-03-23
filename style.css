@@ -488,12 +488,18 @@ body {
 
 /* Reveal Animations */
 .reveal {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1; /* Visible by default for accessibility/fallback */
+    transform: none;
     transition: all 1s ease-out;
 }
 
-.reveal.active {
+/* Only hide if JavaScript is successfully enabled */
+.js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.js-enabled .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }

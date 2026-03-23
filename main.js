@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Add class to signal that JS is successfully loaded and running
+    document.body.classList.add('js-enabled');
+
     // Scroll Reveal Intersection Observer
     const revealElements = document.querySelectorAll('.reveal');
     
